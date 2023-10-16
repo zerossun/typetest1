@@ -6,8 +6,15 @@ import first from '../asset/image/second.png'
 import second from '../asset/image/second.png'
 import third from '../asset/image/third.jpg'
 import fourth from '../asset/image/fourth.jpeg'
-
+import { shareKakao } from "../../utils/shareKakaoLink";
 export default function Result(){
+useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://developers.kakao.com/sdk/js/kakao.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => document.body.removeChild(script);
+    }, []);
 const navigate = useNavigate();
 const restart = () => {navigate('/')}
 const [questionList] = useState(Data);
@@ -70,14 +77,12 @@ if(score < 2){
             <p className='ques'>당신의 덕력은..</p>
             <div className='content'>{setsocre(score)}</div>
         </div>  
-        <div className='down'><button onClick={restart}>다시하기</button></div>
+        <div className='down'>
+            <button onClick={restart}>다시하기</button>
+            <button onClick={() => shareKakao(route, title)}>
+            <img className="w-12 h-12" src={`${process.env.PUBLIC_URL}/assets/KakaoLogo.png`} alt={"Kakao Logo"} />
+            </button>
+        </div>
     </div>
     );
-// 하 존나 어렵고 하기 싫다.
-// 하지만! 기한 오늘까지
-// 그러나! 나는 오늘 생리 1일차
-// 벗! 일정을 지키라고 있는 것
-// 하우에버! 열정이 안 생긴다
-// 네버더레스! 하기로 했자너
-// 내 마음은 도대체 뭘까...?
 }
