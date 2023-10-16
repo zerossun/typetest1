@@ -1,0 +1,86 @@
+//common//
+body{background-color: #fff; width: 22.5rem; display: flex; justify-content: center; height: 100vh; margin: 0 auto; padding:40px 16px 20px 16px; color: #010101;}
+button{border-radius: 30px; background-color: #e8e8e8; width: 100%; text-align: center; cursor: pointer; height: 3.75rem;}
+// img{padding: 20px;}
+
+.display{width: 50rem; margin: 0 auto; text-align: center; padding: 20px;}
+
+.start{
+    font-family: 'yg-jalnan';
+    text-align: center;
+    font-size: 1.125rem;
+    & h2{font-size: 36px;}
+    & img{padding: 40px 0; overflow: hidden; width: 300px; height: 300px; overflow: hidden; object-fit: contain;}
+}
+
+.test{
+    & .number{
+        width: 80px;
+        background-color: #e8e8e8;
+        margin: 0 auto;
+        padding: 8px;
+        border-radius: 50px;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        font-family: 'HakgyoansimBunpilR';
+        font-weight: bold;
+    }
+    & .question{
+        margin-bottom: 20px;
+        width: 100%;
+        overflow: hidden;
+        & .question_q{
+            width: 100%;
+            overflow: hidden;
+            font-family: 'HakgyoansimBunpilR';
+            margin: 0px;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+            height: 10rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    & .answer{
+        & button{
+            display: block;
+            width: 100%;
+            border: 0;
+            height: 3.75rem;
+            border-radius: 10px;
+            border: 1px solid #e8e8e8;
+            background-color: transparent;
+            font-family: 'yg-jalnan';
+        }
+        & button:first-child{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.result{
+    text-align: center;
+    font-size: 1.25rem;
+    & .up{
+        font-family: 'HakgyoansimBunpilR';
+        img{width: 300px; height: 300px; overflow: hidden; object-fit: contain; margin: 16px 0;}
+        & b{
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        & .content{
+         margin: 25px 0 20px 0;
+         & p{
+            line-height: 1.5rem;
+         }
+        }
+    }
+    & .down{
+        & button{
+            font-family: 'yg-jalnan';
+        }
+    }
+
+}
