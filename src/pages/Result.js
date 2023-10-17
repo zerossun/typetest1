@@ -1,21 +1,59 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Data from '../asset/Data.js';
+import star from '../asset/image/start.jpg'
 import normal from '../asset/image/normal.jpg'
 import first from '../asset/image/second.png'
 import second from '../asset/image/second.png'
 import third from '../asset/image/third.jpg'
 import fourth from '../asset/image/fourth.jpeg'
-
+import {FacebookShareButton, FacebookIcon, FacebookMessengerShareButton, FacebookMessengerIcon, TwitterShareButton, TwitterIcon, LineShareButton, LineIcon,} from "react-share";
 export default function Result(){
 const navigate = useNavigate();
 const restart = () => {navigate('/')}
 const [questionList] = useState(Data);
 const location = useLocation();
+const kakaoButton = () => {
+    if (window.Kakao) {
+      const kakao = window.Kakao
+
+      if (!kakao.isInitialized()) {
+        kakao.init('206dac13674d5431132f3d0db85f378f')
+      }
+
+      kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '덕후 판독기',
+          description: '나는 덕질에 얼마나 진심일까?',
+          imageUrl:
+            'https://ifh.cc/g/rR3gVj.jpg',
+          link: {
+            webUrl: 'https://virtupiaotaku.netlify.app/',
+          },
+        },
+        social: {
+          likeCount: 286,
+          commentCount: 45,
+          sharedCount: 845,
+        },
+        buttons: [
+          {
+            title: '웹으로 보기',
+            link: {
+              webUrl: 'https://virtupiaotaku.netlify.app/',
+            },
+          },
+        ],
+      });
+    }
+  }
+
 let {data} = location.state;
 var score = data;
 
 function setsocre(score){
+    
 if(score < 2){
     return(
     <div>
@@ -70,14 +108,22 @@ if(score < 2){
             <p className='ques'>당신의 덕력은..</p>
             <div className='content'>{setsocre(score)}</div>
         </div>  
-        <div className='down'><button onClick={restart}>다시하기</button></div>
+        <div className='down'>
+            <button className="restart" onClick={restart}>다시하기</button>
+            <div className="sns">
+                <p>공유하기</p>
+            <button className="kakao_btn" onClick={kakaoButton}/>
+            <FacebookShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotaku.netlify.app/"}>
+            <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
+            </FacebookShareButton>
+            <LineShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotaku.netlify.app/"}>
+                <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
+            </LineShareButton>
+            <TwitterShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotaku.netlify.app/"}>
+                <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
+            </TwitterShareButton>
+            </div>
+        </div>
     </div>
     );
-// 하 존나 어렵고 하기 싫다.
-// 하지만! 기한 오늘까지
-// 그러나! 나는 오늘 생리 1일차
-// 벗! 일정을 지키라고 있는 것
-// 하우에버! 열정이 안 생긴다
-// 네버더레스! 하기로 했자너
-// 내 마음은 도대체 뭘까...?
 }
