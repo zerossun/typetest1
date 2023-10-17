@@ -1,5 +1,5 @@
 //common//
-body{background-color: #fff; width: 22.5rem; display: flex; justify-content: center; height: 100vh; margin: 0 auto; padding:40px 16px 20px 16px; color: #010101;}
+body{background-color: #fff; width: 22.5rem; height: 100vh; margin: 0 auto; padding:40px 16px 20px 16px; color: #010101;}
 button{border-radius: 30px; background-color: #e8e8e8; width: 100%; text-align: center; cursor: pointer; height: 3.75rem;}
 // img{padding: 20px;}
 
@@ -79,8 +79,26 @@ button{border-radius: 30px; background-color: #e8e8e8; width: 100%; text-align: 
     }
     & .down{
         & button{
+            width: auto;
+        }
+        & .restart{
+            width: 100%;
             font-family: 'yg-jalnan';
         }
+        & .sns{
+            & p{
+                width: 100%;
+                font-family: 'yg-jalnan';
+                margin: 20px 0 12px;
+            }
+            & .kakao_btn{
+                background: url(../image/kakako.png) no-repeat center;
+                background-size: contain;
+                width: 48px;
+                height: 48px;
+            }
+        }
+        
     }
 
 }
