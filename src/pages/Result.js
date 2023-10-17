@@ -70,7 +70,7 @@ if(score < 2){
             <b>입덕</b>
             <img src={first}></img>
             <p>입덕 부정기는 짧을수록 좋다.</p>
-            <p>덕직의 세계에 온 걸 환영합니다.</p>
+            <p>덕질의 세계에 온 걸 환영합니다.</p>
         </div>
         )
     }else if(4 <= score &&  score < 6){
