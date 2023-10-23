@@ -12,7 +12,7 @@ export default function Start(){
         <div className='start'>
             <b>나는 얼마나 덕질에 진심일까?</b>
             <h2>덕후 판독기</h2>
-            <img className='img' src={star}></img>
+            <div className='img'><img src={star}></img></div>
             <button onClick={start}>시작</button>
         </div>
         
