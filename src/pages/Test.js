@@ -13,14 +13,38 @@ const [num, setNum] = useState(1);
 const plus = () => {setNum(num+1)};
 
 const score = num;
-
+console.log(score)
 const next = () => {
     setPage(page + 1)
     if(page + 1 === questionList.length){
-        navigate('/result', {state : {data : num} } )
+        // navigate('/result', {state : {data : num} } )
+        
+    
+            if(score < 2){
+                navigate('/Outcome1')
+                }
+                else if(2 <= score &&  score < 4){
+                return(
+                    navigate('/Outcome2')
+                    )
+                }else if(4 <= score &&  score < 6){
+                return(
+                    navigate('/Outcome3')
+                    )
+                }else if(6 <= score &&  score < 9){
+                return(
+                    navigate('/Outcome4')
+                    )
+                }else if(9 <= score &&  score < 11){
+                return(
+                    navigate('/Outcome5')
+                    )
+                
+            }
     }
 }
 
+console.log(score);
     return(
         <div className='test'>
             <div className='number'>
