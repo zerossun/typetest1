@@ -1,30 +1,38 @@
 //common//
-body{background-color: #fff; width: 22.5rem; height: 100vh; margin: 0 auto; padding:40px 16px 20px 16px; color: #010101;}
-button{border-radius: 30px; background-color: #e8e8e8; width: 100%; text-align: center; cursor: pointer; height: 3.75rem;}
+body{position: relative; background-color: #fff; width: 22.5rem; height: inherit; margin: 0 auto; padding:24px 20px 20px 20px; color: #010101;}
+button{border-radius: 30px; background-color: #F06173; width: 100%; text-align: center; cursor: pointer; height: 3.75rem;}
 // img{padding: 20px;}
-
+img{border-radius: 10px; object-fit: contain;}
 .display{width: 50rem; margin: 0 auto; text-align: center; padding: 20px;}
 
 .start{
-    font-family: 'yg-jalnan';
+    font-family: 'SUIT';
+    font-weight: 700;
     text-align: center;
     font-size: 1.125rem;
     & h2{font-size: 36px;}
-    & img{padding: 40px 0; overflow: hidden; width: 300px; height: 300px; overflow: hidden; object-fit: contain;}
+    & img{margin: 40px 0; overflow: hidden; overflow: hidden; }
+    & button{font-family: 'HakgyoansimBunpilR'; color: #fff;}
 }
 
 .test{
     & .number{
-        width: 80px;
-        background-color: #e8e8e8;
+        width: fit-content;
+        background-color: #F5E7E8;
         margin: 0 auto;
-        padding: 8px;
-        border-radius: 50px;
+        border-radius: 30px;
         display: block;
         overflow: hidden;
         text-align: center;
-        font-family: 'HakgyoansimBunpilR';
-        font-weight: bold;
+        padding: 0 14px;
+        & h2{
+            color: #F48E9C;
+            font-family: 'KyoboHand';
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: center;
+        }
     }
     & .question{
         margin-bottom: 20px;
@@ -33,26 +41,39 @@ button{border-radius: 30px; background-color: #e8e8e8; width: 100%; text-align: 
         & .question_q{
             width: 100%;
             overflow: hidden;
-            font-family: 'HakgyoansimBunpilR';
+            font-weight: 400;
             margin: 0px;
-            font-size: 1.3rem;
-            line-height: 1.6rem;
-            height: 10rem;
+            margin-top:24px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 2.125rem;
+            letter-spacing: -0.04em;
+            text-align: center;
+            font-family: 'KyoboHand';
         }
     }
     & .answer{
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        padding:0 20px;
         & button{
             display: block;
-            width: 100%;
             border: 0;
             height: 3.75rem;
             border-radius: 10px;
-            border: 1px solid #e8e8e8;
-            background-color: transparent;
-            font-family: 'yg-jalnan';
+            border: 1.5px solid #000;
+            background-color: #F06173;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 2.125rem;
+            letter-spacing: -0.04em;
+            text-align: center;
+            font-family: 'KyoboHand';
         }
         & button:first-child{
             margin-bottom: 20px;
@@ -64,32 +85,65 @@ button{border-radius: 30px; background-color: #e8e8e8; width: 100%; text-align: 
     text-align: center;
     font-size: 1.25rem;
     & .up{
-        font-family: 'HakgyoansimBunpilR';
-        img{width: 300px; height: 300px; overflow: hidden; object-fit: contain; margin: 16px 0;}
+        background-color: #F9BBC3;
+        border: 2px solid #252525;
+        border-radius: 25px;
+        padding: 24px 17px;
+        font-family: 'KyoboHand';
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 2.125rem;
+        letter-spacing: -0.04em;
+        text-align: center;
+            & .content{
+              & b{
+                font-size: 2rem;
+                font-weight: 400;
+                }
+              & img{
+                height: 203px;
+                display: block;
+                margin: 0 auto;
+                margin-top: 16px;
+                margin-bottom: 20px;
+            }  
+              & p{white-space: pre-wrap;}
+            }
         & b{
             font-weight: bold;
             font-size: 2rem;
         }
-        & .content{
-         margin: 25px 0 20px 0;
-         & p{
-            line-height: 1.5rem;
-         }
-        }
     }
     & .down{
+        margin-top: 16px;
         & button{
             width: auto;
         }
         & .restart{
             width: 100%;
-            font-family: 'yg-jalnan';
+            height: auto;
+            font-family: 'SUIT';
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.5rem;
+            letter-spacing: -0.04em;
+            text-align: center;
+            background: transparent;
+            text-decoration: underline;
         }
         & .sns{
+            background: #E9E9E9;
+            border-radius: 25px;
+            padding: 16px;
             & p{
                 width: 100%;
-                font-family: 'yg-jalnan';
-                margin: 20px 0 12px;
+                font-family: SUIT;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5rem;
+                letter-spacing: -0.04em;
+                text-align: center;
+                margin-bottom: 16px;
             }
             & .kakao_btn{
                 background: url(../image/kakako.png) no-repeat center;
@@ -98,7 +152,41 @@ button{border-radius: 30px; background-color: #e8e8e8; width: 100%; text-align: 
                 height: 48px;
             }
         }
-        
+        & .virtupia{
+            margin: 22px 0 24px 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            align-items: center;
+            & img{width: 60px; height: auto;}
+            & div{
+                & b{font-family: 'SUIT';
+                    font-size: 1rem;
+                    font-weight: 700;
+                    line-height: 1.5rem;
+                    letter-spacing: -0.04em;
+                    text-align: left;
+                    color: #F06173;
+                    }
+                & p{font-family: 'SUIT';
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    line-height: 1.3125rem;
+                    letter-spacing: -0.04em;
+                    text-align: left;
+                    }
+            }
+        }
+        & .store{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            & button{
+                width: 49%;
+                height: auto;
+                background-color: transparent;
+            }
+        }
     }
 
 }
