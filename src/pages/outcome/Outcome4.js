@@ -21,7 +21,7 @@ const kakaoButton = () => {
           title: '덕후 판독기',
           description: '나는 덕질에 얼마나 진심일까?',
           imageUrl:
-            'https://i.postimg.cc/LXcp4SzF/third.jpg',
+            'https://i.postimg.cc/xTxYC8WM/third.jpg',
           link: {
             webUrl: 'https://virtupiaotakutest.netlify.app/Outcome4',
           },
