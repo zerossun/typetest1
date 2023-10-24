@@ -34,6 +34,10 @@ img{border-radius: 10px; object-fit: contain;}
         overflow: hidden;
         text-align: center;
         padding: 0 14px;
+        position: absolute;
+        left: 50%;
+        top: 38%;
+        transform: translate(-50%, 0%);
         & h2{
             color: #F48E9C;
             font-family: 'KyoboHand';
@@ -145,6 +149,9 @@ img{border-radius: 10px; object-fit: contain;}
             background: #E9E9E9;
             border-radius: 25px;
             padding: 16px;
+            & .share{
+                background-color: transparent;
+            }
             & p{
                 width: 100%;
                 font-family: SUIT;
@@ -170,6 +177,7 @@ img{border-radius: 10px; object-fit: contain;}
     justify-content: space-around;
     padding: 0 20px;
     align-items: center;
+    text-align: left;
     & img{width: 60px; height: auto;}
     & div{
         & b{font-family: 'SUIT';
