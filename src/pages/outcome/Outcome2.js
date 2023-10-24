@@ -27,7 +27,7 @@ const kakaoButton = () => {
           imageUrl:
             'https://ifh.cc/g/rR3gVj.jpg',
           link: {
-            webUrl: 'https://virtupiaotaku.netlify.app/',
+            webUrl: 'https://virtupiaotakutest.netlify.app/Outcome2',
           },
         },
         social: {
@@ -39,7 +39,7 @@ const kakaoButton = () => {
           {
             title: '웹으로 보기',
             link: {
-              webUrl: 'https://virtupiaotaku.netlify.app/',
+              webUrl: 'https://virtupiaotakutest.netlify.app/Outcome2',
             },
           },
         ],
@@ -62,13 +62,13 @@ const kakaoButton = () => {
             <div className="sns">
                 <p>몇 안되는 친구들에게 공유해보세요!</p>
                 <button className="kakao_btn" onClick={kakaoButton}/>
-                <FacebookShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotaku.netlify.app/"}>
+                <FacebookShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotakutest.netlify.app/Outcome2"}>
                 <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
                 </FacebookShareButton>
-                <LineShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotaku.netlify.app/"}>
+                <LineShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotakutest.netlify.app/Outcome2"}>
                     <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
                 </LineShareButton>
-                <TwitterShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotaku.netlify.app/"}>
+                <TwitterShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotakutest.netlify.app/Outcome2"}>
                     <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
                 </TwitterShareButton>
                 <button className="restart" onClick={restart}>인정할 수 없엉...!! 테스트 다시하기</button>
