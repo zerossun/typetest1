@@ -18,8 +18,8 @@ const googleStroeeUrl = "https://play.google.com/store/apps/details?id=com.virtu
             </div>
         </div>
         <div className='store'>
-            <button onClick={()=>window.open(appStoreUrl)}><img src={appstore}></img></button>
             <button onClick={()=>window.open(googleStroeeUrl)}><img src={googlestore}></img></button>
+            <button onClick={()=>window.open(appStoreUrl)}><img src={appstore}></img></button>
         </div>
     </div>
     );
