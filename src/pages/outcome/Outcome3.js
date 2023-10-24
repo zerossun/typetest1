@@ -1,6 +1,9 @@
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import second from '../../asset/image/second.png'
+import Facebook from '../../asset/image/facebook.png';
+import line from '../../asset/image/line.png'
+import twitter from '../../asset/image/twitter.png'
 import OutcomeDown from '../../component/OutcomeDown';
 import {FacebookShareButton, FacebookIcon, FacebookMessengerShareButton, FacebookMessengerIcon, TwitterShareButton, TwitterIcon, LineShareButton, LineIcon,} from "react-share";
 
@@ -26,11 +29,6 @@ const kakaoButton = () => {
             webUrl: 'https://virtupiaotakutest.netlify.app/Outcome3',
           },
         },
-        // social: {
-        //   likeCount: 286,
-        //   commentCount: 45,
-        //   sharedCount: 845,
-        // },
         buttons: [
           {
             title: '웹으로 보기',
@@ -59,18 +57,18 @@ const kakaoButton = () => {
                 <p>몇 안되는 친구들에게 공유해보세요!</p>
                 <button className="kakao_btn" onClick={kakaoButton}/>
                 <FacebookShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotakutest.netlify.app/Outcome3"}>
-                <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
+                  <img src={Facebook} style={{width:'50px'}}></img>
                 </FacebookShareButton>
                 <LineShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotakutest.netlify.app/Outcome3"}>
-                    <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
+                  <img src={line} style={{width:'50px'}}></img>
                 </LineShareButton>
                 <TwitterShareButton style={{ marginLeft: "12px" }} url={"https://virtupiaotakutest.netlify.app/Outcome3"}>
-                    <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
+                  <img src={twitter} style={{width:'50px'}}></img>
                 </TwitterShareButton>
                 <button className="restart" onClick={restart}>인정할 수 없엉...!! 테스트 다시하기</button>
             </div>
-          <OutcomeDown/>
         </div>
+        <OutcomeDown/>
     </div>
     );
 }
