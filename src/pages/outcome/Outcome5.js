@@ -1,14 +1,10 @@
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import fourth from '../../asset/image/fourth.jpeg'
-import virtupia from '../../asset/image/virtupia.png'
-import appstore from '../../asset/image/appstore.png'
-import googlestore from '../../asset/image/googleplay.png'
+import OutcomeDown from '../../component/OutcomeDown';
 import {FacebookShareButton, FacebookIcon, FacebookMessengerShareButton, FacebookMessengerIcon, TwitterShareButton, TwitterIcon, LineShareButton, LineIcon,} from "react-share";
 
 export default function Outcome5(){
-const appStoreUrl = "https://apps.apple.com/kr/app/%EB%B2%84%ED%8A%9C%ED%94%BC%EC%95%84/id6451460797"
-const googleStroeeUrl = "https://play.google.com/store/apps/details?id=com.virtuverseapp&pcampaignid=web_share"
 const navigate = useNavigate();
 const restart = () => {navigate('/')}
 const location = useLocation();
@@ -25,15 +21,10 @@ const kakaoButton = () => {
           title: '덕후 판독기',
           description: '나는 덕질에 얼마나 진심일까?',
           imageUrl:
-            'https://ifh.cc/g/rR3gVj.jpg',
+            'https://i.postimg.cc/2jwc82k1/fourth.jpg',
           link: {
             webUrl: 'https://virtupiaotakutest.netlify.app/Outcome5/',
           },
-        },
-        social: {
-          likeCount: 286,
-          commentCount: 45,
-          sharedCount: 845,
         },
         buttons: [
           {
@@ -73,17 +64,7 @@ const kakaoButton = () => {
                 </TwitterShareButton>
                 <button className="restart" onClick={restart}>인정할 수 없엉...!! 테스트 다시하기</button>
             </div>
-            <div className='virtupia'>
-                <img src={virtupia}></img>
-                <div>
-                    <b>당신과 같은 사람들만 모여있어요!</b>
-                    <p>#함께하는 #버츄얼덕질 #버튜피아</p>
-                </div>
-            </div>
-            <div className='store'>
-                <button onClick={()=>window.open(appStoreUrl)}><img src={appstore}></img></button>
-                <button onClick={()=>window.open(googleStroeeUrl)}><img src={googlestore}></img></button>
-            </div>
+            <OutcomeDown/>
         </div>
     </div>
     );
