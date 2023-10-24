@@ -12,7 +12,7 @@ img{border-radius: 10px; object-fit: contain;}
     font-size: 1.125rem;
     & h2{font-size: 36px;}
     & img{margin: 40px 0; overflow: hidden; overflow: hidden; }
-    & button{font-family: 'HakgyoansimBunpilR'; color: #fff;}
+    & button{font-family: 'HakgyoansimBunpilR'; color: #fff; position: absolute; bottom: 20px; left: 0;}
 }
 
 .test{
