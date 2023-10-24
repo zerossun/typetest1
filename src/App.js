@@ -15,22 +15,13 @@ import logo from '../src/asset/image/logo.png'
 import '../src/App.css'
 function App() {
 
-  const setVh = () => {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
   }
-
-  useEffect(()=> {
-    setVh()
-
-    function  onResize(){
-      setVh()
-    }
-
-    window.addEventListener('resize',onResize)
-  },[])
-
-
+  useEffect(() => {
+    setScreenSize();
+  });
   return (
 <BrowserRouter>
   <Routes>
