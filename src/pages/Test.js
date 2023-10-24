@@ -13,7 +13,7 @@ const [num, setNum] = useState(1);
 const plus = () => {setNum(num+1)};
 
 const score = num;
-console.log(score)
+
 const next = () => {
     setPage(page + 1)
     if(page + 1 === questionList.length){
@@ -44,17 +44,14 @@ const next = () => {
     }
 }
 
-console.log(score);
+
     return(
         <div className='test'>
             <div className='number'>
                 <h2>{`${page+1} / ${questionList.length}`}</h2>
             </div>
-                       
         {questionList.map((val, idx)=>
-        
             <div style={{display:page===idx? 'block' : 'none'}} key={idx}>
-                
                 {val.q.map((qval, qidx)=>{
                     <div className='question_q' key={qidx}>
                         <div>{qval}</div>
