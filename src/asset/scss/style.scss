@@ -1,5 +1,5 @@
 //common//
-body{position: relative; background-color: #fff; width: 22.5rem; height: 100vh; margin: 0 auto; padding:24px 20px 20px 20px; color: #010101;}
+body{position: relative; background-color: #fff; width: 22.5rem; height: 100vh; margin: 0 auto; padding:40px 20px; color: #010101;}
 button{border-radius: 30px; background-color: #F06173; width: 100%; text-align: center; cursor: pointer; height: 3.75rem;}
 // img{padding: 20px;}
 img{border-radius: 10px; object-fit: contain;}
@@ -11,8 +11,15 @@ img{border-radius: 10px; object-fit: contain;}
     text-align: center;
     font-size: 1.125rem;
     & h2{font-size: 36px;}
-    & img{position: absolute; left: 0%; top: 40%; overflow: hidden; }
-    & button{font-family: 'HakgyoansimBunpilR'; color: #fff; position: absolute; bottom: 20px; left: 0;}
+    & .img{
+        position: absolute;
+        left: 0%;
+        top: 40%;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+    
+    & button{font-family: 'HakgyoansimBunpilR'; color: #fff; position: absolute; bottom: 40px; left: 50%; width: calc(100% - 40px); transform: translateX(-50%);}
 }
 
 .test{
@@ -57,7 +64,7 @@ img{border-radius: 10px; object-fit: contain;}
     }
     & .answer{
         position: absolute;
-        bottom: 20px;
+        bottom: 40px;
         left: 0;
         width: 100%;
         padding:0 20px;
@@ -152,43 +159,43 @@ img{border-radius: 10px; object-fit: contain;}
                 height: 48px;
             }
         }
-        & .virtupia{
-            margin: 22px 0 24px 0;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
-            align-items: center;
-            & img{width: 60px; height: auto;}
-            & div{
-                & b{font-family: 'SUIT';
-                    font-size: 1rem;
-                    font-weight: 700;
-                    line-height: 1.5rem;
-                    letter-spacing: -0.04em;
-                    text-align: left;
-                    color: #F06173;
-                    }
-                & p{font-family: 'SUIT';
-                    font-size: 0.875rem;
-                    font-weight: 400;
-                    line-height: 1.3125rem;
-                    letter-spacing: -0.04em;
-                    text-align: left;
-                    }
-            }
-        }
-        & .store{
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            & button{
-                width: 49%;
-                height: auto;
-                background-color: transparent;
-            }
-        }
     }
 
+}
+.virtupia{
+    margin: 22px 0 24px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    & img{width: 60px; height: auto;}
+    & div{
+        & b{font-family: 'SUIT';
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.5rem;
+            letter-spacing: -0.04em;
+            text-align: left;
+            color: #F06173;
+            }
+        & p{font-family: 'SUIT';
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.3125rem;
+            letter-spacing: -0.04em;
+            text-align: left;
+            }
+    }
+}
+.store{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    & button{
+        width: 49%;
+        height: auto;
+        background-color: transparent;
+    }
 }
