@@ -11,7 +11,7 @@ img{border-radius: 10px; object-fit: contain;}
     text-align: center;
     font-size: 1.125rem;
     & h2{font-size: 36px;}
-    & img{margin: 40px 0; overflow: hidden; overflow: hidden; }
+    & img{position: absolute; left: 0%; top: 40%; overflow: hidden; }
     & button{font-family: 'HakgyoansimBunpilR'; color: #fff; position: absolute; bottom: 20px; left: 0;}
 }
 
