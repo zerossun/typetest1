@@ -13,7 +13,7 @@ const googleStroeeUrl = "https://play.google.com/store/apps/details?id=com.virtu
         <div className='virtupia'>
             <img src={virtupia}></img>
             <div>
-                <b>몇 안 되는 친구들에게 공유해보세요<br/>당신의 최애에게 투표해보세요!</b>
+                <b>당신의 최애에게 투표해보세요!</b>
                 <p>#함께하는 #버츄얼덕질 #버튜피아</p>
             </div>
         </div>
