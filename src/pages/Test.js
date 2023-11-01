@@ -1,25 +1,26 @@
 import { Router, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Data from '../asset/Data.js';
-
+import arrow from '../asset/image/back.png'
 export default function Test(){
 const navigate = useNavigate();
-const restart = () => {navigate('/')}
-
-
 const [questionList, setQuestionList] = useState(Data);
 const [page,setPage] = useState(0);
 const [num, setNum] = useState(1);
 const plus = () => {setNum(num+1)};
-
+const back = () => {
+    if(page > 0){
+        navigate(setPage(page - 1));
+        if(score>0){setNum(num-1);}
+    }else{
+        navigate('/');
+    }
+}
 const score = num;
-
+console.log(score)
 const next = () => {
     setPage(page + 1)
     if(page + 1 === questionList.length){
-        // navigate('/result', {state : {data : num} } )
-        
-    
             if(score < 2){
                 navigate('/Outcome1')
                 }
@@ -47,6 +48,9 @@ const next = () => {
 
     return(
         <div className='test'>
+            <button className='none' onClick={()=>back()}>
+                <img src={arrow}></img>
+            </button>
             <div className='number'>
                 <h2>{`${page+1} / ${questionList.length}`}</h2>
             </div>
