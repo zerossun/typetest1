@@ -11,7 +11,6 @@ import Outcome4 from './pages/outcome/Outcome4';
 import Outcome5 from './pages/outcome/Outcome5';
 import "@/../../src/asset/scss/style.scss"
 import "@/../../src/asset/scss/reset.scss"
-import logo from '../src/asset/image/logo.png'
 import '../src/App.css'
 function App() {
 
